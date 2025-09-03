@@ -114,6 +114,23 @@ cc_proto_library(
     ],
 )
 
+cc_proto_library(
+    name = "demo_cc_proto",
+    deps = [
+        ":demo_proto",
+    ],
+)
+
+proto_library(
+    name = "demo_proto",
+    srcs = ["demo.proto"],
+)
+
+py_proto_library(
+    name = "demo_py_pb2",
+    deps = [":demo_proto"],
+)
+
 proto_library(
     name = "chassis_detail_proto",
     srcs = ["chassis_detail.proto"],
@@ -128,6 +145,7 @@ proto_library(
         ":wey_proto",
         ":zhongyun_proto",
         ":mk_mini_proto",
+        ":demo_proto",
         "//modules/common_msgs/basic_msgs:vehicle_id_proto",
     ],
 )
