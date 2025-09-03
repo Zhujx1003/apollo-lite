@@ -38,6 +38,7 @@ enum VehicleBrand {
   DKIT = 8;
   NEOLIX = 9;
   MK_MINI = 10;
+  DEMO = 11;
 }
 
 message LatencyParam {
